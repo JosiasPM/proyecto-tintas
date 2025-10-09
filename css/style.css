@@ -1,0 +1,515 @@
+/* 
+Paleta de colores   
+Blanco   #EFEFE2  R:239  G:239  B:226
+Negro    #101214  R:16   G:18   B:20
+Amarillo #D6BC3A  R:214  G:188  B:58
+
+Tipografias
+
+Cinzel
+font-family: "Cinzel", serif;
+font-weight: bold;
+
+Limelight
+font-family: "Limelight", sans-serif;
+font-weight: 400;
+
+Sen
+font-family: "Sen", sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Julius+Sans+One&family=Limelight&family=Sen:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101214;
+}
+
+/* header -------------------- */
+
+header {
+    height: 100px;
+    background-color: #D6BC3A; 
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;  
+}
+
+.nav{
+    display: flex;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 30px;
+    /* background-color: aqua;
+    border: chocolate 3px solid; */
+}
+
+nav a {
+    color: #101214;
+    text-decoration: none; 
+}
+
+/* main -------------------- */
+
+/* Titulos */
+
+h1 {
+    font-family: "Limelight", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: #EFEFE2;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 30px;
+    /* background-color: aqua;
+    border: chocolate 3px solid; */
+}
+
+/* Subtitulos */
+
+h2 {
+    font-family: "Limelight", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+/* index */
+
+.quienes-somos{
+    background-color: #EFEFE2;
+    margin: 0px 150px 30px 150px;
+    padding: 10px 20px;
+}
+
+.ganas-tatuarte{
+    background-color: #EFEFE2;
+    margin: 30px 150px;
+    padding: 10px 20px;
+}
+
+.necesitas-ayuda{
+    background-color: #EFEFE2;
+    margin: 30px 150px;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tatuadores */
+
+.tatuadores {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    gap: 50px;
+    margin-bottom: 50px;
+    /* background-color: #EFEFE2;   */
+}
+
+.tatuador {
+    display: grid;
+    grid-template-areas: 
+    "nombre nombre"
+    "foto texto"
+    "estrellas texto";
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 50px 160px 70px ;
+    padding: 10px;
+    gap: 10px; 
+    background-color: #EFEFE2;
+    height: 300px;
+    width: 700px; 
+}
+
+.nombre {
+    grid-area: nombre;
+    width: 100%;
+    height: 100%;
+}
+
+.foto {
+    grid-area: foto;
+    width: 80%;
+    height: 100%;
+    justify-self: center;
+}
+
+.texto {
+    grid-area: texto;
+    width: 100%;
+    height: 100%;
+    
+}
+.estrellas {
+      direction: rtl; 
+      unicode-bidi: bidi-override;
+      font-size: 40px;
+      display: inline-block;
+      grid-area: estrellas;
+      height: 100%;
+      justify-self: center;
+}
+
+.estrellas input {
+      display: none; 
+}
+
+.estrellas label {
+      color: lightgray;
+      cursor: pointer;
+}
+
+.estrellas input:checked ~ label {
+      color: gold;
+}
+
+.estrellas label:hover,
+.estrellas label:hover ~ label {
+      color: gold;
+}
+
+.carousel {
+  width: 700px;      /* ancho fijo */
+  height: 300px;     /* alto fijo */
+  margin: 0 auto;    /* centrar */
+}
+
+.carousel {
+  /* object-fit: cover; recorta sin deformar */
+  height: 100%;
+  width: 100%;
+}
+
+/* Estudios */
+
+.estudio {
+  display: grid;
+  grid-template-areas: 
+    "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa"
+    "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa"
+    "imagen imagen imagen tatuador1 tatuador2 tatuador3 mapa mapa mapa"
+    "estrellas estrellas estrellas tatuador1 tatuador2 tatuador3 mapa mapa mapa";
+  grid-template-columns: 10% 10% 10% 13% 13% 13% 10% 10% 10%; 
+  grid-template-rows: 35% 35% 15% 15%;   
+  background-color: #EFEFE2;
+  margin-bottom: 50px;
+  width: 80%;
+  
+}
+
+.imagen-estudio {
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.descripcion {
+    grid-area: descripcion;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.tatuador1 {
+    grid-area: tatuador1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.tatuador2 {
+    grid-area: tatuador2;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.tatuador3 {
+    grid-area: tatuador3;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.mapa {
+    grid-area: mapa;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 10px;
+}
+
+/* Estilos */
+
+.estilo-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEFE2;
+    margin: 0px 100px 30px 100px;
+    padding: 20px;
+    
+}
+
+.titulo-estilos {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.estilos {
+    display: flex;
+    justify-content: center;
+}
+
+.ejemplos {
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+}
+
+/* Parrafos */
+
+p {
+    font-family: "Sen", sans-serif;
+    color: #101214;
+    font-size: 2rem;
+}
+
+/* footer -------------------- */
+
+footer {
+    background-color: #D6BC3A;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.formulario-completo {
+    display: flex;
+}
+
+    /* Primera columna */
+
+    .texto-izquierda {
+        width: 200px;
+        /* background-color: aqua;
+        border: chocolate 3px solid; */
+    }
+
+    h3 {
+        font-family: "Cinzel", serif;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 20px; 
+    }
+    .texto-footer {
+        font-family: "Sen", sans-serif;
+        color: #101214;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
+
+    /* Segunda columna */
+
+    .body-formulario {
+        /* background-color: aqua;
+        border: chocolate 3px solid; */
+        width: 630px;
+    }
+
+    .formulario {
+        font-family: "Sen", sans-serif;
+        display: flex;
+        flex-wrap: wrap;           
+        padding: 20px;
+    }
+
+    .columnas {
+        display: flex;
+        gap: 20px;
+    }
+
+    .columna-izquierda {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 40%;            
+    }
+
+    .columna-derecha {
+        flex: 0 0 60%;             
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        box-sizing: border-box;  
+    }
+
+    textarea {
+        width: 299px;
+        height: 104px;
+        resize: none;
+        margin: 5px 0px;
+    }
+
+    .boton-container {
+        width: 555px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .boton-enviar {
+        font-family: "Sen", sans-serif;
+        font-size: 16px;
+        background-color:#101214;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Tercer Columna */
+
+    .contactos-derecha {
+        width: 300px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 50px;
+        /* background-color: aqua;
+        border: chocolate 3px solid; */
+    }
+
+    .iconos{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .redes {
+        height: 60px;
+        width: 60px;
+    }
+
+ /* Footer diferente */
+
+.paginas {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* Mobile-------------------- */
+
+@media (max-width:480px) {
+    /* header */
+    header {
+    height: 140px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav {
+        margin: 3px;
+        font-size: 20px;
+    }
+    /* titulos, subtitulos y textos */
+    h1 {
+        font-size: 40px;
+        white-space: normal;
+        text-align: center;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 20px;
+    }
+    /* index */
+    .quienes-somos{
+    margin: 0px 50px 20px 50px;
+    }
+    .ganas-tatuarte{
+    margin: 20px 50px;
+    }
+    .necesitas-ayuda {
+        margin: 20px 50px 30px 50px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .formulario-completo {
+        flex-direction: column;
+    }
+    .texto-izquierda {
+        width: 100%;
+        text-align: center;
+    }
+    .body-formulario,
+    .formulario,
+    .columnas,
+    .columna-izquierda,
+    .columna-derecha,
+    input,
+    textarea,
+    .boton-container,
+    .boton-enviar {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+    textarea {
+        height: 100px;
+    }
+    /* tatuadores */
+    .tatuadores {
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .tatuador {
+    grid-template-areas: 
+      "nombre"
+      "foto"
+      "texto"
+      "estrellas";
+    grid-template-columns: 100%; 
+    grid-template-rows: auto; 
+    padding: 5px;
+    gap: 5px;
+    width: 90%; 
+    height: auto; 
+    font-size: 14px; 
+    }
+}   
