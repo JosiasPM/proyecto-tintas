@@ -1,0 +1,97 @@
+@use "../variables/variables" as*;
+
+.estudio {
+  display: grid;
+  grid-template-areas: 
+    "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa"
+    "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa"
+    "imagen imagen imagen tatuador1 tatuador2 tatuador3 mapa mapa mapa"
+    "estrellas estrellas estrellas tatuador1 tatuador2 tatuador3 mapa mapa mapa";
+  grid-template-columns: 10% 10% 10% 13% 13% 13% 10% 10% 10%; 
+  grid-template-rows: 35% 35% 15% 15%;   
+  background-color: #EFEFE2;
+  margin-bottom: 50px;
+  width: 80%;
+
+  .imagen-estudio {
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .descripcion {
+    grid-area: descripcion;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    h2 {
+      @extend h2;
+      
+    }
+
+    p{
+      @extend p;
+      width: 100%;
+        font-size: 27px;
+    }
+  }
+
+  .tatuador1 {
+    grid-area: tatuador1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .tatuador2 {
+    grid-area: tatuador2;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .tatuador3 {
+    grid-area: tatuador3;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .mapa {
+    grid-area: mapa;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 0 10px 10px;
+  }
+
+  .estrellas {
+    direction: rtl; 
+    unicode-bidi: bidi-override;
+    font-size: 40px;
+    display: inline-block;
+    grid-area: estrellas;
+    height: 100%;
+    justify-self: center;
+
+    input {
+      display: none;
+    }
+
+    label {
+      color: lightgray;
+      cursor: pointer;
+
+      &:hover,
+      &:hover ~ label {
+        color: gold;
+      }
+    }
+
+    input:checked ~ label {
+      color: gold;
+    }
+  }
+}

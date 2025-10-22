@@ -1,0 +1,139 @@
+@use "../variables/variables" as*;
+
+footer {
+  background-color: $color-primario;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h3 {
+  font-family: $tipografia-principal;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+}
+
+footer label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+footer input,
+footer textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+footer textarea {
+  width: 299px;
+  height: 104px;
+  resize: none;
+  margin: 5px 0px;
+}
+
+footer .formulario-completo {
+  display: flex;
+
+  .texto-izquierda {
+    width: 200px;
+    
+    .texto-footer {
+      font-family: "Sen", sans-serif;
+      color: $color-secundario;
+      font-size: 18px;
+      padding: 0px 20px;
+    }
+  }
+
+  .body-formulario {
+    width: 630px;
+
+    .formulario {
+      font-family: $tipografia-tercearia;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+
+      .columnas {
+        display: flex;
+        gap: 20px;
+
+        .columna-izquierda {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 40%;
+        }
+
+        .columna-derecha {
+          flex: 0 0 60%;
+        }
+      }
+
+      .boton-container {
+        width: 555px;
+        text-align: center;
+        margin-top: 10px;
+
+        .boton-enviar {
+          font-family:$tipografia-tercearia;
+          font-size: 16px;
+          background-color: $color-secundario;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer .contactos-derecha {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+
+  .iconos {
+    display: flex;
+    justify-content: space-between;
+
+    .redes {
+      height: 60px;
+      width: 60px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.paginas {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+
+    .visita-redes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .iconos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .redes {
+        height: 60px;
+        width: 60px;
+
+        &:hover {
+        transform: scale(1.2);
+      }
+    }
+}
+

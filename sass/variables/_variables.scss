@@ -1,0 +1,31 @@
+// variables
+
+// paleta de colores
+$color-primario:#D6BC3A;
+$color-secundario:#101214;
+$color-terceario:#EFEFE2;
+
+// familias tipograficas
+$tipografia-principal:"Cinzel", serif;;
+$tipografia-secundaria:"Limelight", sans-serif;
+$tipografia-tercearia:"Sen", sans-serif;
+
+// estilos base 
+
+h2 {
+    font-family: $tipografia-secundaria;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+
+}
+
+p{
+    font-family: $tipografia-tercearia;
+    color: $color-secundario;
+    font-size: 2rem;
+    text-align: justify;
+
+}
