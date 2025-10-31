@@ -586,5 +586,256 @@ footer .contactos-derecha .iconos .redes:hover {
     justify-content: center;
   }
 }
+@media (min-width: 481px) and (max-width: 780px) {
+  body {
+    margin: 0;
+  }
+  header {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  header nav ul .nav {
+    margin: 3px;
+    font-size: 20px;
+  }
+  main {
+    padding: 0 20px;
+  }
+  main h1 {
+    font-size: 36px;
+    white-space: normal;
+    text-align: center;
+    margin: 20px 10px;
+    line-height: 1.2;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .info-main {
+    margin: 20px 30px;
+    padding: 15px 25px;
+  }
+  main section .info-main h2 {
+    font-size: 24px;
+  }
+  main section .info-main p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  footer .formulario-completo {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  footer .formulario-completo .texto-izquierda {
+    width: 100%;
+    text-align: center;
+  }
+  footer .formulario-completo .texto-izquierda .texto-footer {
+    padding: 0 10px;
+  }
+  footer .formulario-completo .body-formulario {
+    width: 100%;
+  }
+  footer .formulario-completo .body-formulario .formulario {
+    flex-direction: column;
+    padding: 10px;
+  }
+  footer .formulario-completo .body-formulario .formulario .columnas {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .formulario-completo .body-formulario .formulario .columnas .columna-izquierda,
+  footer .formulario-completo .body-formulario .formulario .columnas .columna-derecha {
+    flex: 1 1 100%;
+  }
+  footer .formulario-completo .body-formulario .formulario .columnas .columna-derecha textarea {
+    width: 100%;
+  }
+  footer .formulario-completo .body-formulario .formulario .boton-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer .formulario-completo .body-formulario .formulario .boton-container .boton-enviar {
+    width: 100%;
+  }
+  footer .contactos-derecha {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  footer .contactos-derecha .iconos {
+    justify-content: center;
+    gap: 15px;
+  }
+  footer .contactos-derecha .iconos .redes {
+    width: 50px;
+    height: 50px;
+  }
+  .tatuadores {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .tatuadores .tatuador {
+    display: grid;
+    grid-template-areas: "nombre" "foto" "estrellas" "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 10px;
+    gap: 10px;
+    background-color: #EFEFE2;
+    width: 100%;
+    height: auto;
+  }
+  .tatuadores .tatuador h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .tatuadores .tatuador .nombre {
+    grid-area: nombre;
+    width: 100%;
+  }
+  .tatuadores .tatuador .foto {
+    grid-area: foto;
+    width: 80%;
+    height: auto;
+    justify-self: center;
+  }
+  .tatuadores .tatuador .texto {
+    grid-area: texto;
+    width: 100%;
+    font-size: 18px;
+    text-align: justify;
+  }
+  .tatuadores .tatuador .estrellas {
+    grid-area: estrellas;
+    font-size: 30px;
+    justify-self: center;
+  }
+  .tatuadores .carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .tatuadores .carousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .estudio {
+    display: grid;
+    grid-template-areas: "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa" "imagen imagen imagen descripcion descripcion descripcion mapa mapa mapa" "imagen imagen imagen tatuador1 tatuador2 tatuador3 mapa mapa mapa" "estrellas estrellas estrellas tatuador1 tatuador2 tatuador3 mapa mapa mapa";
+    grid-template-columns: repeat(3, 1fr) repeat(3, 1.5fr) repeat(3, 1fr);
+    grid-template-rows: 2fr 2fr 1fr 1fr;
+    gap: 10px;
+    background-color: #EFEFE2;
+    margin-bottom: 50px;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .estudio .imagen-estudio {
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .estudio .descripcion {
+    grid-area: descripcion;
+    padding: 10px;
+  }
+  .estudio .descripcion h2 {
+    font-size: clamp(20px, 2.5vw, 32px);
+    margin-bottom: 10px;
+  }
+  .estudio .descripcion p {
+    font-size: clamp(16px, 2vw, 27px);
+    line-height: 1.4;
+  }
+  .estudio .tatuador1, .estudio .tatuador2, .estudio .tatuador3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .estudio .tatuador1 {
+    grid-area: tatuador1;
+  }
+  .estudio .tatuador2 {
+    grid-area: tatuador2;
+  }
+  .estudio .tatuador3 {
+    grid-area: tatuador3;
+  }
+  .estudio .mapa {
+    grid-area: mapa;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border: 0;
+  }
+  .estudio .estrellas {
+    grid-area: estrellas;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(24px, 4vw, 40px);
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  .estudio .estrellas input {
+    display: none;
+  }
+  .estudio .estrellas label {
+    color: lightgray;
+    cursor: pointer;
+  }
+  .estudio .estrellas label:hover, .estudio .estrellas label:hover ~ label {
+    color: gold;
+  }
+  .estudio .estrellas input:checked ~ label {
+    color: gold;
+  }
+  .estudio {
+    grid-template-areas: "imagen" "descripcion" "tatuador1" "tatuador2" "tatuador3" "mapa" "estrellas";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .descripcion h2 {
+    font-size: 24px;
+  }
+  .descripcion p {
+    font-size: 18px;
+  }
+}
+.estilo-centrado {
+  margin: 0 50px 20px 50px;
+  padding: 15px;
+}
+.estilo-centrado .titulo-estilos {
+  width: 100%;
+}
+.estilo-centrado .estilos {
+  flex-direction: column;
+  align-items: center;
+}
+.estilo-centrado .estilos img {
+  width: 80%;
+  height: auto;
+}
+.estilo-centrado .estilos .texto-estilos {
+  width: 80%;
+}
 
 /*# sourceMappingURL=main.css.map */
